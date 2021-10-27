@@ -13,6 +13,7 @@ This application allows you to view the last 10 launches of SpaceX using the Spa
 ## Usage
 
 Clone the repo and run `npm install`.
+
 `npm start` - compile application and run it in a local server at `http://localhost:3000/`.
 
 
