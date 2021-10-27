@@ -1,0 +1,26 @@
+h1 {
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #868686;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.section {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 32%;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+    }
+}
