@@ -1,4 +1,4 @@
-h1 {
+.h1 {
     margin: 40px 0;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -21,6 +21,39 @@ h1 {
         margin-right: 2%;
         &:nth-of-type(3n) {
             margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        .wrap {
+            flex-basis: 49%;
+            &:nth-of-type(3n) {
+                margin-right: 2%;
+            }
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .h1 {
+        margin: 20px 15px 0;
+    }
+    .section {
+        margin: 20px 15px;
+        .wrap {
+            flex-basis: 100%;
+            &:nth-of-type(n) {
+                margin-right: 0;
+                margin-top: 2%;
+            }
+            &:nth-of-type(1) {
+                margin-top: 0;
+            }
         }
     }
 }

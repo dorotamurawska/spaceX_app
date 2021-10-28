@@ -18,9 +18,10 @@ code {
     monospace;
 }
 a.carousel-control-prev, a.carousel-control-next {
-  top: -100px;
+  top: -11vh;
+  transform: translateY(-50%);
   font-weight: bold;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   height: 32px;
 }
@@ -41,4 +42,21 @@ a.carousel-control-next {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   line-height: 16px;
+}
+span.carousel-control-prev-icon, span.carousel-control-next-icon {
+  background-image: url('../src/img/arrow.svg');
+}
+span.carousel-control-next-icon{
+  transform: scale(-1);
+}
+
+@media (max-width: 700px) {
+  a.carousel-control-prev, a.carousel-control-next {
+    top: -9vh;
+    transform: translate(-20%, -50%);
+  }
+  a.carousel-control-prev {
+    top: -9vh;
+    transform: translate(20%, -50%);
+  }
 }

@@ -1,7 +1,7 @@
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import classes from './Main.module.scss';
 
-const Main = ({ missionName, rocketName, recovered, date, site, title, link }) => {
+const Main = ({ missionName, rocketName, recovered, date, site, title, link, isMobile }) => {
 
     const formatDate = () => {
         const monthsArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -37,7 +37,7 @@ const Main = ({ missionName, rocketName, recovered, date, site, title, link }) =
             <div className={classes.right}>
                 <div className={classes.date_wrap}>
                     <p className={classes.lable}>Launch date</p>
-                    <p className={classes.date}>{formatDate()}</p>
+                    <p className={classes.date}>{isMobile ? date : formatDate()}</p>
                 </div>
                 <div className={classes.site_wrap}>
                     <p className={classes.lable}>Launch site</p>

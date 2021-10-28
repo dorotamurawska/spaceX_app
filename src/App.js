@@ -10,6 +10,25 @@ import classes from './App.module.scss';
 
 const App = () => {
   const [missions, setMissions] = useState(undefined);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    console.log('dziala')
+    if (document.documentElement.clientWidth < 700) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', handleResize);
+    };
+  }, []);
 
   const url = 'https://api.spacex.land/graphql/';
   const query = `{
@@ -73,6 +92,7 @@ const App = () => {
       <Carousel.Item
         key={mission.mission_name}>
         <Main
+          isMobile={isMobile}
           missionName={mission.mission_name}
           rocketName={mission.rocket.rocket_name}
           recovered={isRecovered}
