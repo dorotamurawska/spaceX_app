@@ -2,9 +2,7 @@
 
 This application allows you to view the last 10 launches of SpaceX using the SpaceX API.
 
-## Go Live
-
-https://xmr58.csb.app/
+## API is Not maintained, so the application is not working, but still you can see the code
 
 ## Technologies
 
